@@ -1,0 +1,246 @@
+/* =========================================
+   STYLE.CSS - To-Do List App
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #2d3436;
+    line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #2c3e50;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar .brand {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+    color: #3498db;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+/* ===== HERO / BERANDA ===== */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    min-width: 150px;
+}
+
+.stat-box h2 {
+    font-size: 28px;
+    color: #3498db;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* ===== FORM ===== */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-primary { background-color: #3498db; color: #fff; }
+.btn-success { background-color: #27ae60; color: #fff; }
+.btn-warning { background-color: #f39c12; color: #fff; }
+.btn-danger  { background-color: #e74c3c; color: #fff; }
+.btn-secondary { background-color: #95a5a6; color: #fff; }
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+table tr:hover {
+    background-color: #f9fbfd;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.badge-tinggi   { background-color: #e74c3c; }
+.badge-sedang   { background-color: #f39c12; }
+.badge-rendah   { background-color: #27ae60; }
+.badge-selesai  { background-color: #27ae60; }
+.badge-belum    { background-color: #e67e22; }
+
+.action-links a {
+    margin-right: 8px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* ===== ALERT ===== */
+.alert {
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background-color: #d4f8e8;
+    color: #1e8449;
+    border: 1px solid #27ae60;
+}
+
+.alert-danger {
+    background-color: #fde2e1;
+    color: #c0392b;
+    border: 1px solid #e74c3c;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar .nav-links {
+        margin-top: 10px;
+    }
+    .navbar .nav-links a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    table {
+        font-size: 12px;
+    }
+}
